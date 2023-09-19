@@ -17,6 +17,56 @@ font-family: 'Lato', sans-serif; */
   height: 36vh;
 }
 
+.header .navbar {
+  display: grid;
+  grid-template-columns: repeat(3, minMax(100px, 1fr));
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+}
+
+.header .navbar .nav-hamburger {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  justify-self: left;
+}
+
+.header .navbar .nav-hamburger div {
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  opacity: 0.7;
+}
+
+.header .navbar .nav-hamburger div:last-child {
+  margin-top: 8px;
+}
+
+.header .navbar .nav-logo .site-title a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.header .navbar .nav-socials-purchase-container {
+  justify-self: right;
+  cursor: pointer;
+}
+
+.header .navbar .nav-socials-purchase-container .nav-purchase-icon {
+  display: flex;
+}
+
+.header .navbar .nav-socials-purchase-container .nav-purchase-icon .nav-purchase-icon-count {
+  color: #FFF;
+  margin-left: 5px;
+}
+
+
+
 .nav-socials {
   display: none;
 }
