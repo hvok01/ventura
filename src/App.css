@@ -101,7 +101,6 @@ font-family: 'Lato', sans-serif; */
   color: #000;
 }
 
-
 .nav-socials {
   /* display: none; */
   position: fixed;
@@ -119,6 +118,72 @@ font-family: 'Lato', sans-serif; */
   margin: 10px;
 }
 
-.nav-socials a svg path{
+.nav-socials a svg path, .nav-socials a svg circle {
   fill: #000;
+}
+
+@media screen and (min-width: 900px) {
+
+  .header .navbar {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .header .navbar .nav-hamburger {
+    opacity: 0;
+    display: none;
+  }
+
+  .header .navbar .nav-links {
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    opacity: 1;
+    grid-column: 3 / 4;
+  }
+
+  .header .navbar .nav-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header .navbar .nav-links ul li a {
+    font-size: 1rem;
+    color: #FFF;
+  }
+
+  .header .navbar .nav-logo {
+    justify-self: left;
+    grid-column: 1 / 2;
+  }
+
+  .header .navbar .nav-socials-purchase-container {
+    grid-column: 4 / 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-socials {
+    opacity: 1;
+    position: inherit;
+  }
+
+  .nav-socials a svg {
+    margin: 0px 10px;
+  }
+
+  .nav-socials a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-socials a svg path, .nav-socials a svg circle {
+    fill: #FFF;
+  }
 }
