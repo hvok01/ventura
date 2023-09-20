@@ -11,7 +11,10 @@ function App() {
   const [timeline, setTimeline] = useState<gsap.core.Timeline>();
   const lineOne = useRef(null)
   const lineTwo = useRef(null)
-
+  const links = useRef(null)
+  const logo = useRef(null)
+  const cartCount = useRef(null)
+  const socialLinks = useRef(null)
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -24,12 +27,24 @@ function App() {
 
   const animation = (tl: gsap.core.Timeline) => {
 
-    tl?.to(lineOne.current, {
+    tl?.to(links.current, {
+      opacity: 1,
+    }).to(lineOne.current, {
       rotate: "315",
       y: "4",
-    }).to(lineTwo.current, {
+      backgroundColor: "#000"
+    }, "<").to(lineTwo.current, {
       rotate: "405",
-      y: "-8"
+      y: "-8",
+      backgroundColor: "#000"
+    }, "<").to(logo.current, {
+      color: "#000"
+    }, "<").to(cartCount.current, {
+      color: "#000"
+    }, "<").to("#cartIcon", {
+      color: "#000"
+    }, "<").to(socialLinks.current, {
+      opacity: 1,
     }, "<").reverse()
   }
 
@@ -50,24 +65,24 @@ function App() {
 
             <div className="nav-logo">
               <span className="site-title">
-                <a href="#">
+                <a href="#" ref={logo}>
                   Ventura
                 </a>
               </span>
             </div>
 
-            <div className="nav-links">
+            <div className="nav-links" ref={links}>
               <ul>
                 <li><a href="#">Shop</a></li>
-                <li><a href="#">Our Story</a></li>
-                <li><a href="#">Journal</a></li>
+                <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
+                <li><a href="#">Stockists</a></li>
               </ul>
             </div>
 
             <div className="nav-socials-purchase-container">
 
-              <div className="nav-socials">
+              <div className="nav-socials" ref={socialLinks}>
                 <a href="#">
                   <InstagramIcon />
                 </a>
@@ -80,8 +95,8 @@ function App() {
               </div>
 
               <div className="nav-purchase-icon">
-                <ShoppingCartSolidIcon style={{color: "#fff", fontSize:"1.5rem"}}/>
-                <div className="nav-purchase-icon-count">
+                <ShoppingCartSolidIcon style={{color: "#fff", fontSize:"1.5rem"}} id='cartIcon'/>
+                <div className="nav-purchase-icon-count" ref={cartCount}>
                   0
                 </div>
               </div>

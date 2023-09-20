@@ -23,6 +23,7 @@ font-family: 'Lato', sans-serif; */
   align-items: center;
   justify-items: center;
   padding: 20px;
+  position: relative;
 }
 
 .header .navbar .nav-hamburger {
@@ -30,6 +31,7 @@ font-family: 'Lato', sans-serif; */
   border: none;
   background-color: transparent;
   justify-self: left;
+  z-index: 3;
 }
 
 .header .navbar .nav-hamburger div {
@@ -43,6 +45,10 @@ font-family: 'Lato', sans-serif; */
   margin-top: 8px;
 }
 
+.header .navbar .nav-logo {
+  z-index: 3;
+}
+
 .header .navbar .nav-logo .site-title a {
   color: #fff;
   text-decoration: none;
@@ -54,6 +60,7 @@ font-family: 'Lato', sans-serif; */
 .header .navbar .nav-socials-purchase-container {
   justify-self: right;
   cursor: pointer;
+  z-index: 3;
 }
 
 .header .navbar .nav-socials-purchase-container .nav-purchase-icon {
@@ -65,12 +72,53 @@ font-family: 'Lato', sans-serif; */
   margin-left: 5px;
 }
 
+.header .navbar .nav-links {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  opacity: 0;
+}
+
+.header .navbar .nav-links ul {
+  list-style: none;
+}
+
+.header .navbar .nav-links ul li {
+  text-align: center;
+  padding: 10px;
+}
+
+.header .navbar .nav-links ul li a {
+  font-size: 2.5rem;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  color: #000;
+}
 
 
 .nav-socials {
-  display: none;
+  /* display: none; */
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
 }
 
-.nav-links {
-  display: none;
+.nav-socials a svg {
+  margin: 10px;
+}
+
+.nav-socials a svg path{
+  fill: #000;
 }
