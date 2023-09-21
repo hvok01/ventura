@@ -7,6 +7,8 @@ import { useLayoutEffect, useState, useRef } from 'react';
 import gsap from 'gsap';
 import ventura02 from "./assets/ventura-02.jpg"
 import ventura03 from "./assets/ventura-03.jpg"
+import ventura04 from "./assets/ventura-04.jpg"
+import ventura05 from "./assets/ventura-05.jpg"
 
 function App() {
   //https://ventura-fluid-demo.squarespace.com/
@@ -69,69 +71,96 @@ function App() {
               <div className="nav-hamburger-2" ref={lineTwo}></div>
             </button>
 
-            <div className="nav-logo">
-              <span className="site-title">
-                <a href="#" ref={logo}>
-                  Ventura
-                </a>
-              </span>
-            </div>
-
-            <div className="nav-links" ref={links}>
-              <ul>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Stockists</a></li>
-              </ul>
-            </div>
-
-            <div className="nav-socials-purchase-container">
-
-              <div className="nav-socials" ref={socialLinks}>
-                <a href="#">
-                  <InstagramIcon />
-                </a>
-                <a href="#">
-                  <FacebookIcon />
-                </a>
-                <a href="#">
-                  <TwitterIcon />
-                </a>
-              </div>
-
-              <div className="nav-purchase-icon">
-                <ShoppingCartSolidIcon style={{color: "#fff", fontSize:"1.5rem"}} id='cartIcon'/>
-                <div className="nav-purchase-icon-count" ref={cartCount}>
-                  0
-                </div>
-              </div>
-              
-            </div>
-          </nav>
-        </header>
-
-        <main>
-          <div className="main-content-title">
-            <h1>
-            Brightening homes with unique, durable products.
-          </h1>
+          <div className="nav-logo">
+            <span className="site-title">
+              <a href="#" ref={logo}>
+                Ventura
+              </a>
+            </span>
           </div>
-          <div className="main-content-products">
-            <div className="main-content-hero-image">
-              <img src={ventura02} alt="hero image product 1" />
-            </div>
-            <div className="main-content-product-detail">
-              <small>Featured</small>
-              <img src={ventura03} alt="product image 1" />
-              <h3>Golden Mist Pair</h3>
-              <p>$50.00</p>
-              <button>
-                Shop All
-              </button>
-            </div>
+
+          <div className="nav-links" ref={links}>
+            <ul>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Stockists</a></li>
+            </ul>
           </div>
-        </main>
+
+          <div className="nav-socials-purchase-container">
+
+            <div className="nav-socials" ref={socialLinks}>
+              <a href="#">
+                <InstagramIcon />
+              </a>
+              <a href="#">
+                <FacebookIcon />
+              </a>
+              <a href="#">
+                <TwitterIcon />
+              </a>
+            </div>
+
+            <div className="nav-purchase-icon">
+              <ShoppingCartSolidIcon style={{color: "#fff", fontSize:"1.5rem"}} id='cartIcon'/>
+              <div className="nav-purchase-icon-count" ref={cartCount}>
+                0
+              </div>
+            </div>
+            
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <div className="main-content-title">
+          <h1>
+          Brightening homes with unique, durable products.
+        </h1>
+        </div>
+        <div className="main-content-products">
+          <div className="main-content-hero-image">
+            <img src={ventura02} alt="hero image product 1" />
+          </div>
+          <div className="main-content-product-detail">
+            <small>Featured</small>
+            <img src={ventura03} alt="product image 1" />
+            <h3>Golden Mist Pair</h3>
+            <p>$50.00</p>
+            <button>
+              Shop All
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <div className="galery-products-container">
+        <div className="item">
+          <img src={ventura04} alt="" />
+          <p>Explore</p>
+          <a href="#">The Core collection</a>
+        </div>
+
+        <div className="item">
+          <img src={ventura05} alt="" />
+          <p>Start Fresh</p>
+          <a href="#">Sets and Pairs</a>
+        </div>
+      </div>
+
+      <div className="newsletter-container">
+        <div className="newsletter-title">
+          <h1>Monthly Dispatch</h1>
+          <p>Sign up to receive news and updates.</p>
+        </div>
+        <div className="newsletter-form">
+          <input placeholder="Email Address" type="email" name="Email" id="email" />
+          <button>
+            Sign Up
+          </button>
+        </div>
+      </div>
     </>
   )
 }
