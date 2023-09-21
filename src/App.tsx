@@ -161,6 +161,33 @@ function App() {
           </button>
         </div>
       </div>
+
+      <footer className="footer">
+        <div className="footer-title">
+          <h1>Ventura</h1>
+        </div>
+        <div className="footer-links">
+          <div>
+            <span><a href="#">Shop</a></span>
+            <span><a href="#">Contact</a></span>
+          </div>
+          <div>
+            <span><a href="#">About</a></span>
+            <span><a href="#">Stockists</a></span>
+          </div>
+        </div>
+        <div className="footer-media">
+              <a href="#">
+                <InstagramIcon />
+              </a>
+              <a href="#">
+                <FacebookIcon />
+              </a>
+              <a href="#">
+                <TwitterIcon />
+              </a>
+        </div>
+      </footer>
     </>
   )
 }
