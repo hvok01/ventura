@@ -5,6 +5,8 @@ import FacebookIcon from './assets/FacebookIcon';
 import TwitterIcon from './assets/TwitterIcon';
 import { useLayoutEffect, useState, useRef } from 'react';
 import gsap from 'gsap';
+import ventura02 from "./assets/ventura-02.jpg"
+import ventura03 from "./assets/ventura-03.jpg"
 
 function App() {
   //https://ventura-fluid-demo.squarespace.com/
@@ -29,6 +31,7 @@ function App() {
 
     tl?.to(links.current, {
       opacity: 1,
+      duration: 0.2,
     }).to(lineOne.current, {
       rotate: "315",
       y: "4",
@@ -45,6 +48,9 @@ function App() {
       color: "#000"
     }, "<").to(socialLinks.current, {
       opacity: 1,
+      y: "-10",
+      duration: 0.3,
+      delay: 0.1
     }, "<").reverse()
   }
 
@@ -104,6 +110,28 @@ function App() {
             </div>
           </nav>
         </header>
+
+        <main>
+          <div className="main-content-title">
+            <h1>
+            Brightening homes with unique, durable products.
+          </h1>
+          </div>
+          <div className="main-content-products">
+            <div className="main-content-hero-image">
+              <img src={ventura02} alt="hero image product 1" />
+            </div>
+            <div className="main-content-product-detail">
+              <small>Featured</small>
+              <img src={ventura03} alt="product image 1" />
+              <h3>Golden Mist Pair</h3>
+              <p>$50.00</p>
+              <button>
+                Shop All
+              </button>
+            </div>
+          </div>
+        </main>
     </>
   )
 }

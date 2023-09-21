@@ -122,6 +122,68 @@ font-family: 'Lato', sans-serif; */
   fill: #000;
 }
 
+main .main-content-title {
+  display: flex;
+  margin: 60px 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+main .main-content-title h1 {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  line-height: 2.3rem;
+  word-spacing: -0.1rem;
+}
+
+main .main-content-products {
+  display: flex;
+  flex-direction: column;
+}
+
+main .main-content-products .main-content-hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+main .main-content-products .main-content-hero-image img {
+  width: 90vw;
+  height: 400px;
+  object-fit: cover;
+}
+
+main .main-content-products .main-content-product-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+main .main-content-products .main-content-product-detail small {
+  font-weight: 600;
+  margin: 20px 0px;
+}
+
+main .main-content-products .main-content-product-detail h3 {
+  margin-top: 10px;
+} 
+
+main .main-content-products .main-content-product-detail p {
+  margin-top: 5px;
+} 
+
+main .main-content-products .main-content-product-detail button {
+  margin: 20px 0px 40px 0px;
+  padding: 20px 80px;
+  border: none;
+  background-color: #f48847;
+  color: #FFF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+} 
+
 @media screen and (min-width: 900px) {
 
   .header .navbar {
