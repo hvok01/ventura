@@ -1,14 +1,17 @@
 import './App.css'
-import { ShoppingCartSolidIcon } from '@fluentui/react-icons-mdl2';
-import InstagramIcon from './assets/InstagramIcon';
-import FacebookIcon from './assets/FacebookIcon';
-import TwitterIcon from './assets/TwitterIcon';
-import { useLayoutEffect, useState, useRef } from 'react';
-import gsap from 'gsap';
+import { ShoppingCartSolidIcon } from '@fluentui/react-icons-mdl2'
+import InstagramIcon from './assets/InstagramIcon'
+import FacebookIcon from './assets/FacebookIcon'
+import TwitterIcon from './assets/TwitterIcon'
+import { useLayoutEffect, useState, useRef } from 'react'
+import gsap from 'gsap'
 import ventura02 from "./assets/ventura-02.jpg"
 import ventura03 from "./assets/ventura-03.jpg"
 import ventura04 from "./assets/ventura-04.jpg"
 import ventura05 from "./assets/ventura-05.jpg"
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 function App() {
   //https://ventura-fluid-demo.squarespace.com/
@@ -19,15 +22,62 @@ function App() {
   const logo = useRef(null)
   const cartCount = useRef(null)
   const socialLinks = useRef(null)
+  const mainContentImage = useRef(null)
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({paused: false});
+      animationOnLoad()
+
+      const tl = gsap.timeline({paused: false})
       animation(tl)
-      setTimeline(tl);
+      setTimeline(tl)
     });
-    return () => ctx.revert();
+    return () => ctx.revert()
   }, [])
+
+  const animationOnLoad = () => {
+
+    gsap.set(mainContentImage.current, {
+      opacity: 0,
+    })
+    
+    gsap.set(".item img", {
+      opacity: 0,
+    })
+
+    const animation = gsap?.to(mainContentImage.current, {
+      opacity: 1,
+      duration: 0.4,
+      y: "-8",
+    })
+
+    const animationOtherImages = gsap?.to(".item img", {
+      opacity: 1,
+      duration: 0.4,
+      y: "-8",
+    })
+    
+    ScrollTrigger.create({
+      animation: animation,
+      trigger: mainContentImage.current,
+      scrub: false,
+      start: "-10% center",
+      end: "100% center",
+      // markers: true,
+      once: true,
+    })
+    
+    ScrollTrigger.create({
+      animation: animationOtherImages,
+      trigger: ".item img",
+      scrub: false,
+      start: "-10% center",
+      end: "100% center",
+      // markers: true,
+      once: true,
+    })
+
+  }
 
   const animation = (tl: gsap.core.Timeline) => {
 
@@ -121,7 +171,7 @@ function App() {
         </div>
         <div className="main-content-products">
           <div className="main-content-hero-image">
-            <img src={ventura02} alt="hero image product 1" />
+            <img src={ventura02} alt="hero image product 1" ref={mainContentImage}/>
           </div>
           <div className="main-content-product-detail">
             <small>Featured</small>
