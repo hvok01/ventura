@@ -31,7 +31,7 @@ font-family: 'Lato', sans-serif; */
   border: none;
   background-color: transparent;
   justify-self: left;
-  z-index: 3;
+  z-index: 50;
 }
 
 .header .navbar .nav-hamburger div {
@@ -46,7 +46,7 @@ font-family: 'Lato', sans-serif; */
 }
 
 .header .navbar .nav-logo {
-  z-index: 3;
+  z-index: 50;
 }
 
 .header .navbar .nav-logo .site-title a {
@@ -60,7 +60,7 @@ font-family: 'Lato', sans-serif; */
 .header .navbar .nav-socials-purchase-container {
   justify-self: right;
   cursor: pointer;
-  z-index: 3;
+  z-index: 50;
 }
 
 .header .navbar .nav-socials-purchase-container .nav-purchase-icon {
@@ -83,6 +83,7 @@ font-family: 'Lato', sans-serif; */
   align-items: center;
   background-color: #FFF;
   opacity: 0;
+  z-index: 30;
 }
 
 .header .navbar .nav-links ul {
@@ -337,6 +338,7 @@ main .main-content-products .main-content-product-detail button {
   .header .navbar .nav-hamburger {
     opacity: 0;
     display: none;
+    z-index: 50;
   }
 
   .header .navbar .nav-links {

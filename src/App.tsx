@@ -103,6 +103,9 @@ function App() {
       y: "-10",
       duration: 0.3,
       delay: 0.1
+    }, "<").to(".nav-links ul li", {
+      y: "-10",
+      duration: 0.3,
     }, "<").reverse()
   }
 
